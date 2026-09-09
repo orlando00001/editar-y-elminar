@@ -1,26 +1,14 @@
-package com.example.demoooo.domain;
+package com.example.demoooo.aplication.service.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+public class DispositivoDto {
 
-@Entity
-@Table(name = "dispositivos")
-public class Dispositivo {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String marca;
     private String tipo;
     private Double precio;
 
-    private Boolean estado = true;
-
-    public Dispositivo() {}
+    public DispositivoDto() {}
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -36,7 +24,4 @@ public class Dispositivo {
 
     public Double getPrecio() { return precio; }
     public void setPrecio(Double precio) { this.precio = precio; }
-
-    public Boolean getEstado() { return estado; }
-    public void setEstado(Boolean estado) { this.estado = estado; }
 }
